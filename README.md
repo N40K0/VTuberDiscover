@@ -6,13 +6,13 @@ The source code for the AI isn't included in this repository because the code st
 
 # How to use
 
-Upload your image which there is a VTuber you want to know in this [**site**](https://n40k0.github.io/VtuberDiscover/), crop your image and focus on the VTuber inside the image for better result.
+Upload your image which there is a VTuber you want to know in this [**site**](https://n40k0.github.io/VTuberDiscover/), crop your image and focus on the VTuber inside the image for better result.
 
 # Troubleshooting
 
 ### 1.  This is not the VTuber in this image
 
-You can create an issue about it [here](https://github.com/N40K0/VtuberDiscover/issues), please include your image in your post so that people who know the VTuber can give you an answer regarding to them.
+You can create an issue about it [here](https://github.com/N40K0/VTuberDiscover/issues), please include your image in your post so that people who know the VTuber can give you an answer regarding to them.
 
 It's possible that the VTubers are not in the database yet so they will be added at some point in the future.
 
