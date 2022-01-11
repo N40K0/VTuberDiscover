@@ -1,12 +1,12 @@
 # VtuberDiscover
 
-This is a tool I created to **hopefully** help the VTuber community find out who the VTuber inside the of the image they have.
+This is a tool I created to help the VTuber community find VTubers using an image they have available.
 
 The source code for the AI isn't included in this repository because the code structure is *terrible* and some people say it's hard to read, so I decided to not upload the code for the AI.
 
 # How to use
 
-Upload your image which there is a VTuber you want to know in this [**site**](https://n40k0.github.io/VTuberDiscover/), crop your image and focus on the VTuber inside the image for better result.
+Go to this [site](https://n40k0.github.io/VTuberDiscover/), upload the image of the vtuber you want to find, crop the image for better results.
 
 # Troubleshooting
 
