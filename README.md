@@ -1,6 +1,6 @@
 # VtuberDiscover
 
-This is a tool I created to help the vtuber community find vtubers using an image they have available
+This is a tool I created to help the VTuber community find VTubers using an image they have available.
 
 The source code for the AI isn't included in this repository because the code structure is *terrible* and some people say it's hard to read, so I decided to not upload the code for the AI.
 
@@ -12,7 +12,7 @@ Go to this [site](https://n40k0.github.io/VTuberDiscover/), upload the image of 
 
 ### 1.  This is not the VTuber in this image
 
-You can create an issue about it [here](https://github.com/N40K0/VtuberDiscover/issues), please include your image in your post so that people who know the VTuber can give you an answer regarding to them.
+You can create an issue about it [here](https://github.com/N40K0/VTuberDiscover/issues), please include your image in your post so that people who know the VTuber can give you an answer regarding to them.
 
 It's possible that the VTubers are not in the database yet so they will be added at some point in the future.
 
