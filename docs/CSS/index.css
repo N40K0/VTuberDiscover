@@ -13,50 +13,62 @@
     padding: 0;
 }
 
-body {
-    background-color: #2e3440;
-    background-image: url("../wave.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
 header h1 {
-    color: #d8dee9;
+    color: white;
     padding: 5px 5px;
-    margin: 20px 0 0 20px;
+    margin: 20px auto;
     font-size: 20px;
     width: 20%;
     text-align: center;
     border-radius: 15px;
     font-weight: bold;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    background-color: #2e3440;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    background-color: black;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    position: absolute;
+    width: 90vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: baseline;
+    grid-column-gap: 50px;
+}
+
+/* ------- Drop Zone ------- */
 .drop-zone {
     align-items: center;
-    background-color: #3b4252;
+    align-self: center;
+    border: 7px solid black;
     border-radius: 25px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.30);
-    color: #d8dee9;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6);
+    color: black;
     display: grid;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 30px;
-    height: 350px;
+    height: 307px;
     padding: 20px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
     text-align: center;
-    transition: 1s;
-    transform: translate(-50%, -50%);
-    width: 350px;
+    width: 1fr;
 }
 
-.drop-zone:hover{
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+/* ------- Prediction logs ------- */
+.prediction-logs {
+    width: 2fr;
+    background-color: black;
+    height: 327px;
+    padding: 20px;
+    align-self: center;
+    border-radius: 20px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
+    color: white;
+    overflow: auto;
 }
 
-.file-holder {
+/* ------- File Input ------- */
+.input-file {
     display: none;
 }
