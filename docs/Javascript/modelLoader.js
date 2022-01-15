@@ -7,15 +7,14 @@ function newLine(text, breakLine = true) {
     line.textContent = text + " "
     predictionLogs.appendChild(line)
 }
-
+let Model
 (function () {
     const loadModel = tf.loadGraphModel("./Model/model.json")
 
     newLine("Loading . . .")
     loadModel.then((model) =>    {
         newLine("Done!", false)
-        document.AIModel = model
-        document.AIModel.loaded = true
+        Model = model
     })
 
 })()
