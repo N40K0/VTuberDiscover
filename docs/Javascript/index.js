@@ -1,5 +1,5 @@
-let dropZone = document.querySelector(".drop-zone")
-let fileInput = document.querySelector(".input-file")
+const dropZone = document.querySelector(".drop-zone")
+const fileInput = document.querySelector(".input-file")
 
 dropZone.addEventListener("dragover", (event) => {
     event.preventDefault()
@@ -8,10 +8,12 @@ dropZone.addEventListener("dragover", (event) => {
 dropZone.addEventListener("drop", (event) => {
     event.stopPropagation()
     event.preventDefault()
-    let files = event.dataTransfer.files
-    console.log(files)
+
+    const files = event.dataTransfer.files
+
     files.forEach(file => {
-        if (file.type.startsWith("image")) predict(file)
+        console.log(file)
+        if (file.type.startsWith("image") && document.AIModel.loaded) predict(file)
     });
 });
 
@@ -19,8 +21,12 @@ dropZone.addEventListener("click", (event) => {
     fileInput.click()
 })
 
-fileInput.addEventListener("click", (event)=>{
-    console.log(fileInput.files)
+fileInput.addEventListener("click", (event) => {
+    const files = fileInput.files
+
+    files.forEach(file => {
+        if (file.type.startsWith("image") && document.AIModel.loaded) predict(file)
+    });
 })
 
 function predict(file) {
@@ -34,15 +40,26 @@ function predict(file) {
 
     reader.onload = () => {
         image.src = reader.result
-        image.onload = () => {
-            let result = tf.tidy(() => {
+
+        image.onload = async () => {
+            await tf.tidy(() => {
                 image = tf.browser.fromPixels(image, 3)
                 image = tf.expandDims(image)
                 image = tf.cast(image, "float32")
 
-                let output = Model.predict(image)
-                console.log(output.dataSync())
+                const output = document.AIModel.predict(image)
+                
+                const result = Array.from(output.dataSync())
+                const maxResult = Math.max(...result)
+                const index = result.indexOf(maxResult)
+                const predictionResult = document.AIModel.labels[index]
+                
+                newLine("Done!", false)
+                newLine(`The picture shows an indication that the ${predictionResult["name"]} is the person in the picture `)
             })
         }
     }
 }
+
+
+

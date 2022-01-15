@@ -60,12 +60,13 @@ header h1 {
     width: 2fr;
     background-color: black;
     height: 327px;
-    padding: 20px;
+    border: 20px black solid;
     align-self: center;
     border-radius: 20px;
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
     color: white;
     overflow: auto;
+    font-size: 17px;
 }
 
 /* ------- File Input ------- */

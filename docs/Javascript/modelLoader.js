@@ -7,14 +7,29 @@ function newLine(text, breakLine = true) {
     line.textContent = text + " "
     predictionLogs.appendChild(line)
 }
-let Model
+
 (function () {
     const loadModel = tf.loadGraphModel("./Model/model.json")
+
+    const requestURL = "./vtuber-data.json"
+    let request = new XMLHttpRequest()
+
+    request.open("GET", requestURL)
+    request.responseType = "json"
+    request.send()
+
+    let labels
+    request.onload = ()=>{
+        labels = request.response
+        document.querySelector("#counter").textContent = labels.length
+    }
 
     newLine("Loading . . .")
     loadModel.then((model) =>    {
         newLine("Done!", false)
-        Model = model
+        document.AIModel = model
+        document.AIModel.loaded = true
+        document.AIModel.labels = labels
     })
 
 })()

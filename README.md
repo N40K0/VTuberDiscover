@@ -19,3 +19,7 @@ It's possible that the VTubers are not in the database yet so they will be added
 ### 2. I want you to add this VTuber to the database
 
 Sure, you can help me as simple as providing a source about the VTuber such as a link to their youtube or twitch, or if you have a little free time you can create a data set in the form of portrait images focused on them.
+
+### 3. Why there's **REDACTED** on the database ?
+
+I haven't get the permissons to add them to the database.
