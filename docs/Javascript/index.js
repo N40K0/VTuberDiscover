@@ -12,7 +12,6 @@ dropZone.addEventListener("drop", (event) => {
     const files = event.dataTransfer.files
 
     files.forEach(file => {
-        console.log(file)
         if (file.type.startsWith("image") && document.AIModel.loaded) predict(file)
     });
 });
@@ -21,9 +20,9 @@ dropZone.addEventListener("click", (event) => {
     fileInput.click()
 })
 
-fileInput.addEventListener("click", (event) => {
+fileInput.addEventListener("change", (event) => {
     const files = fileInput.files
-
+    
     files.forEach(file => {
         if (file.type.startsWith("image") && document.AIModel.loaded) predict(file)
     });
