@@ -13,12 +13,11 @@
     padding: 0;
 }
 
-header h1 {
+.title {
     color: white;
-    padding: 5px 5px;
+    padding: 10px;
     margin: 20px auto;
     font-size: 20px;
-    width: 20%;
     text-align: center;
     border-radius: 15px;
     font-weight: bold;
@@ -27,15 +26,15 @@ header h1 {
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    position: absolute;
-    width: 90vw;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    align-items: baseline;
-    grid-column-gap: 50px;
+    display: flex;
+    width: 100vw;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.container * {
+    margin: 2%;
 }
 
 /* ------- Drop Zone ------- */
@@ -72,4 +71,88 @@ header h1 {
 /* ------- File Input ------- */
 .input-file {
     display: none;
+}
+
+.imageInputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageContainer {
+    padding: 15px;
+    display: flex;
+    flex-flow: nowrap column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    margin: 2px;
+    border-radius: 20px;
+    box-shadow: 0 3px 7px rgba(92, 40, 40, 0.5);
+    color: white;
+    animation: appear 200ms 1;
+}
+
+.imageDetails {
+    display: inline;
+    margin: 2%;
+    font-size: 16px;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translate(0, -50px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.image {
+    width:100%
+}
+
+
+@media only screen and (min-width:560px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .image {
+        max-width: 50vw;
+    }
+
+    .title {
+        width: 50%;
+    }
+
+    .imageInputs {
+        flex-direction: row-reverse;
+    }
+}
+
+@media only screen and (max-width:560px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .title {
+        max-width: 80vw;
+    }
+
+    .image {
+        max-width: 90vw;
+    }
+
+    .drop-zone {
+        height: 107px;
+    }
+
+    .imageInputs {
+        flex-direction: column-reverse;
+    }
 }
