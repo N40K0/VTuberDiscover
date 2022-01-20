@@ -56,7 +56,8 @@
 
 /* ------- Prediction logs ------- */
 .prediction-logs {
-    width: 2fr;
+    width: 700px;
+    min-width: 2fr;
     background-color: black;
     height: 327px;
     border: 20px black solid;
@@ -78,6 +79,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .imageContainer {
@@ -88,6 +90,7 @@
     justify-content: center;
     background-color: black;
     margin: 2px;
+    /* max-width: 200px; */
     border-radius: 20px;
     box-shadow: 0 3px 7px rgba(92, 40, 40, 0.5);
     color: white;
