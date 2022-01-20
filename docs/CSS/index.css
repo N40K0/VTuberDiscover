@@ -13,11 +13,12 @@
     padding: 0;
 }
 
-.title {
+header h1 {
     color: white;
-    padding: 10px;
+    padding: 5px 5px;
     margin: 20px auto;
     font-size: 20px;
+    width: 20%;
     text-align: center;
     border-radius: 15px;
     font-weight: bold;
@@ -26,15 +27,15 @@
 }
 
 .container {
-    display: flex;
-    width: 100vw;
-    align-self: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.container * {
-    margin: 2%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    position: absolute;
+    width: 90vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: baseline;
+    grid-column-gap: 50px;
 }
 
 /* ------- Drop Zone ------- */
@@ -73,6 +74,7 @@
 .input-file {
     display: none;
 }
+<<<<<<< HEAD
 
 .imageInputs {
     display: flex;
@@ -159,3 +161,5 @@
         flex-direction: column-reverse;
     }
 }
+=======
+>>>>>>> parent of a7fa75a (improved UI)
