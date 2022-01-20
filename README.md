@@ -23,3 +23,7 @@ Sure, you can help me as simple as providing a source about the VTuber such as a
 ### 3. Why there's **REDACTED** on the database ?
 
 I haven't get the permissons to add them to the database.
+
+### 4. It's able to predict artwork ?
+
+Currently it's hard to predict an artwork correctly, improvement soon ... hopefully
