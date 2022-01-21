@@ -1,5 +1,5 @@
 **Unavailable for now** 
-Please refer to Improve UI branch for lastest working site.
+Please refer to UI Improvement branch for lastest working site.
 
 # VtuberDiscover
 
