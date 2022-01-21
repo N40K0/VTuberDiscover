@@ -1,4 +1,5 @@
-**Unavailable for now**
+**Unavailable for now** 
+Please refer to Improve UI branch for lastest working site.
 
 # VtuberDiscover
 
