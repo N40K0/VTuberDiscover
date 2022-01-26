@@ -13,12 +13,11 @@
     padding: 0;
 }
 
-header h1 {
+.title {
     color: white;
-    padding: 5px 5px;
+    padding: 10px;
     margin: 20px auto;
     font-size: 20px;
-    width: 20%;
     text-align: center;
     border-radius: 15px;
     font-weight: bold;
@@ -27,15 +26,15 @@ header h1 {
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    position: absolute;
-    width: 90vw;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    align-items: baseline;
-    grid-column-gap: 50px;
+    display: flex;
+    width: 100vw;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.container * {
+    margin: 2%;
 }
 
 /* ------- Drop Zone ------- */
@@ -57,8 +56,7 @@ header h1 {
 
 /* ------- Prediction logs ------- */
 .prediction-logs {
-    width: 700px;
-    min-width: 2fr;
+    width: 2fr;
     background-color: black;
     height: 327px;
     border: 20px black solid;
@@ -74,14 +72,12 @@ header h1 {
 .input-file {
     display: none;
 }
-<<<<<<< HEAD
 
 .imageInputs {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
 .imageContainer {
@@ -92,7 +88,6 @@ header h1 {
     justify-content: center;
     background-color: black;
     margin: 2px;
-    /* max-width: 200px; */
     border-radius: 20px;
     box-shadow: 0 3px 7px rgba(92, 40, 40, 0.5);
     color: white;
@@ -161,5 +156,3 @@ header h1 {
         flex-direction: column-reverse;
     }
 }
-=======
->>>>>>> parent of a7fa75a (improved UI)
