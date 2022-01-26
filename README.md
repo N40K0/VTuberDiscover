@@ -1,6 +1,3 @@
-**Unavailable for now** 
-Please refer to UI Improvement branch for lastest working site.
-
 # VtuberDiscover
 
 This is a tool I created to help the VTuber community find VTubers using an image they have available.
