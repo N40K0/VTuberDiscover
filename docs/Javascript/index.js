@@ -58,6 +58,7 @@ function predict(file) {
         image.onload = async () => {
             await tf.tidy(() => {
                 image = tf.browser.fromPixels(image, 3)
+                image = tf.image.resizeBilinear(image, [224, 224]).div(tf.scalar(255))
                 image = tf.expandDims(image)
                 image = tf.cast(image, "float32")
 
