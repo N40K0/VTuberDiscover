@@ -58,7 +58,7 @@ function predict(file) {
         image.onload = async () => {
             await tf.tidy(() => {
                 image = tf.browser.fromPixels(image, 3)
-                image = tf.image.resizeBilinear(image, [224, 224]).div(tf.scalar(255))
+                image = image.div(tf.scalar(255))
                 image = tf.expandDims(image)
                 image = tf.cast(image, "float32")
 
@@ -70,16 +70,16 @@ function predict(file) {
                 const predictionResult = document.AIModel.labels[index]
 
                 newLine("Done!", false)
-                newLine(`The picture shows an indication that the ${predictionResult["name"]} is the person in the picture `)
+                newLine(`The picture shows an indication that ${predictionResult["name"]} is the person in the picture `)
                 details.textContent = `Prediction: ${predictionResult.name.trim()}`
             })
         }
     }
 }
 
-function setImage(file, index){
+function setImage(file, index) {
     let url = URL.createObjectURL(file)
-    
+
     let div = document.createElement("div")
 
     div.className = "imageContainer"
